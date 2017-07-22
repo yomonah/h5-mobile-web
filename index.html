@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+    <title>我们结婚了</title>
+    <meta name='viewport' content='width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'/>
+    <style type='text/css'>
+      *,html{
+        margin: 0;
+        padding: 0;
+      }
+      iframe{
+        display: none;
+      }
+      .radio{
+        position: fixed;
+        top: 3%;
+        left: 83%;
+        z-index: 1;
+        animation: radio 4s infinite linear;
+      }
+      @keyframes radio{
+        0%{
+          transform: rotate(0deg);
+        }
+        100%{
+          transform: rotate(360deg);
+        }
+      }
+      html,body{
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+      }
+      .swiper-container,.swiper-container img{
+        width: 100%;
+        height: 100%;
+      }
+      .swiper-slide{
+        position: relative;
+      }
+      .click_start{
+        position: fixed;
+        background: url(./src/start.png) no-repeat;
+        background-size: contain;
+        width: 16%;
+        height: 10%;
+        left: 43%;
+        bottom: -2%;
+        z-index: 1000;
+      }
+      .swiper-slide-active .p1{
+        position: absolute;
+        top: 27%;
+        left: 21%;
+        font-size: 1.3rem;
+        color: #999;
+        opacity: 1;
+        animation: p1 1.5s 1;
+      }
+      @keyframes p1{
+        0%{
+          opacity: 0;
+          font-size: 0.8rem;
+        }
+        100%{
+          font-size: 1.3rem;
+          opacity: 1;
+        }
+      }
+      .swiper-slide-active .p2_1{
+        position: absolute;
+        top: 84%;
+        left: 16%;
+        opacity: 1;
+        color: #999;
+        font-size: 1.1rem;
+        animation: p2_1 1.5s 1;
+      }
+      @keyframes p2_1{
+        0%{
+          left: -10%;
+          opacity: 0;
+        }
+        100%{
+          left: 16%;
+          opacity: 1;
+        }
+      }
+      .swiper-slide-active .p2_2{
+        position: absolute;
+        top: 88%;
+        left: 56%;
+        opacity: 1;
+        color: #999;
+        font-size: 1.1rem;
+        animation: p2_2 2s 1;
+      }
+      @keyframes p2_2{
+        0%{
+          left: 100%;
+          opacity: 0;
+        }
+        50%{
+          eft: 100%;
+          opacity: 0;
+        }
+        100%{
+          left: 56%;
+          opacity: 1;
+        }
+      }
+      .last{
+        position: absolute;
+        width: 100%;
+        height: 18%;
+        background: rgba(0,0,0,0.2);
+        top: 82%;
+        color: #fff;
+        font-size: 1.8rem;
+        text-align: center;
+        padding-top: 4%;
+        opacity: 0;
+        transition: opacity 2s;
+      }
+      .swiper-slide-active .last{
+        opacity: 1;
+      }
+      .div4{
+        position: absolute;
+        top: 80%;
+        width: 100%;
+        height: 16%;
+      }
+      .div4 img{
+        display: block;
+        width: 10%;
+        height: 25%;
+        position: relative;
+        left: 46%;
+        top: 10%;
+        opacity: 0;
+        transition: top,opacity 1s;
+      }
+      .div4 p{
+        text-align: center;
+        color: #999;
+        margin-top: 6%;
+        opacity: 0;
+        transition: opacity 1.5s;
+        transition-delay: 0.5s;
+        white-space: nowrap;
+      }
+      .swiper-slide-active .div4 img{
+        opacity: 1;
+      }
+      .swiper-slide-active .div4 p{
+        opacity: 1;
+      }
+      .replace-img{
+        position: absolute;
+        top: 0%;
+      }
+      .swiper-slide-active .replace-img{
+        animation: replace 2s ease-in-out;
+      }
+      @keyframes replace{
+        0%{
+          top: 45%;
+          width: 10%;
+          height: 10%;
+          left: 45%;
+          opacity: 0;
+        }
+        30%{
+          top: 45%;
+          width: 10%;
+          height: 10%;
+          left: 45%;
+          opacity: 0;
+          transform: rotate(0deg);
+        }
+        100%{
+          top: 0%;
+          width: 100%;
+          height: 100%;
+          left: 0%;
+          opacity: 1;
+          transform: rotate(720deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <img class='radio' src='./src/radio.png'/>
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="http://music.163.com/outchain/player?type=2&id=1987888&auto=1&height=66"></iframe>
+    <div class='swiper-container'>
+      <div class='swiper-wrapper'>
+        <div class='swiper-slide'>
+          <img src='./src/1.jpg'/>
+          <p class='p1'>I swear I'll always be there...</p>
+        </div>
+        <div class='swiper-slide'>
+          <img src='./src/2.jpg'/>
+          <p class='p2_1'>想要就这样笑着</p>
+          <p class='p2_2'>与你相拥一生</p>
+        </div>
+        <div class='swiper-slide'>
+          <img src='./src/5.jpg'/>
+          <img class='replace-img' src='./src/6.jpg'/>
+        </div>
+        <div class='swiper-slide'>
+          <img src='./src/4.jpeg'/>
+          <div class='div4'>
+            <img src='./src/love.jpg'/>
+            <p>从认识到现在，我们走过一段美好的时光</p>
+          </div>
+        </div>
+        <div class='swiper-slide'>
+          <img src='./src/3.jpeg'/>
+          <div class='last'>
+            <p>Happy Wedding</p>
+            <p>YY & MY</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='click_start'></div>
+  </body>
+  <script src='http://libs.baidu.com/jquery/1.11.1/jquery.min.js'></script>
+  <script type='text/javascript' src='http://cdn.bootcss.com/Swiper/3.4.0/js/swiper.min.js'></script>
+  <script type='text/javascript'>
+    var mySwiper = new Swiper('.swiper-container',{
+      direction:'vertical',
+      loop:false,
+      nextButton:'.swiper-button-next'
+    });
+    $('.click_start').click(function(){
+      mySwiper.slideNext();
+    })
+  </script>
+</html>
